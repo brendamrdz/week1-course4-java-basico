@@ -23,7 +23,7 @@
   - [If statement](#if-statement)
   - [ELSE IF](#else-if)
   - [Ternary operators](#ternary-operators)
-- [switch](#switch)
+- [Switch](#switch)
 - [What are the functions for?](#what-are-the-functions-for)
   - [Scope](#scope)
 - [Java Docs](#java-docs)
