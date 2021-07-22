@@ -53,7 +53,7 @@ When compiling we obtain .class files with code that our computers can understan
 The JVM (Java Virtual Machine) is in charge of executing the code so that it works on any device or operating system.
 Java is a compiled and interpreted language at the same time.
 
-<br><img src="https://github.com/brendamrdz/week1-course4-java-basico/blob/main/images/Stages%20of%20Java%20programming.JPG?raw=true" alt="alt text" width="10%" height="auto"><br><br>
+<br><img src="https://github.com/brendamrdz/week1-course4-java-basico/blob/main/images/Stages%20of%20Java%20programming.JPG?raw=true" alt="alt text" width="50%" height="auto"><br><br>
 ## Declaring variables
 ## Working with functions
 ## Loops
