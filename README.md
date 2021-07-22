@@ -55,8 +55,72 @@ Java is a compiled and interpreted language at the same time.
 
 <br><img src="https://github.com/brendamrdz/week1-course4-java-basico/blob/main/images/Stages%20of%20Java%20programming.JPG?raw=true" alt="alt text" width="30%" height="auto"><br><br>
 ## Declaring variables
-## Working with functions
-## Loops
+A variable is a memory space (RAM) that contains a numeric, Boolean, text or other slightly more complex data type.
+Variables in Java consist of a unique name and a value that can change during program execution. When declaring variables we must define the type of data we are going to use and a semicolon at the end;
+````bash
+public class Variables {
+  public static void main(String[] args) {
+    // Declare the variable speed of type int (integers)
+    int spped;
+
+    // Update the content of the variable speed:
+    spped = 10; // if you had already declared the variable.
+
+    // Declare a variable and assign a value to it at the same time:
+    int salary = 1000;
+
+    // Create a String variable:
+    String eployeeName = "Brenda";
+  }
+}
+```
+## Java Naming Convention
+A naming convention is a pattern that variable names must follow so that the code is organized, understandable and without repetition.
+
+- Java is case sensitive, this point is key when following a naming convention.
+
+- Variables must always start with a letter symbol, $ or _.
+
+- You cannot use the - symbol anywhere in the variable.
+
+- Constant variables are variables whose value will never change, so they must be written in all uppercase and using the _ character.
+
+- We must use Upper Camel Case in the names of classes and files. And Lower Camel Case in the names of variables or methods.
+````bash
+// Upper Camel Case:
+class ImClass {};
+
+// Lower Camel Case
+int ImNumberInt = 10;
+```
+## Types of data 
+### Data types for integers (without decimals):
+
+- byte: Occupies 1 byte of memory and its range is from -128 to 127.
+- short: Occupies 2 bytes of memory and ranges from -32,768 to 32,727.
+- int: It occupies 4 bytes of memory and its range is -2,147,483,648 to 2,147,483,647. It is very convenient to use, since it is not so small that our numbers do not fit, nor so - big that it wastes a lot of memory. It can store up to 10 digits.
+- long: It occupies 8 bytes of memory and its range is from -9,223,372,372,036,854,775,808 to 9,223,372,036,854,775,807. To differentiate it from a long data type we must end the number with the letter L.
+For example:
+````bash
+// Int:
+int n = 1234567890;
+
+// Long:
+long nL = 123456789012345L;
+```
+### Data types for floating numbers (with decimals):
+
+- float: they occupy 4 bytes of memory and range from 1.40129846432481707e-45 to 3.40282346636638528860e+38. As long, we must place a letter F at the end.
+- double: They occupy 8 bytes of memory and their range is 4.9406564584124654446544e-324d to 1.79769313486231570e+308d.
+For example:
+````bash
+// Double:
+double nD = 123.456123456;
+
+// Float
+float nF = 123.456F;
+```
+### 
 ## Conditionals
 ## Programming logic
 ## Algorithms
