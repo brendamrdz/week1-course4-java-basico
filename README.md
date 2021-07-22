@@ -1,14 +1,14 @@
 # Java SE
 ## Table of Contents
-What is Java?
-Java and JDK versions
-Language syntax
-Stages of Java programming
-Declaring variables
+
 ## What is Java?
 Java is a high-level programming language that helps us build applications for different devices and operating systems.
 It was created in 1991 by James Gosling while working at Sun Microsystems, a company that was later acquired by Oracle. This means that Java is very well maintained, but also has some changes that not everyone will agree with.
+
+
 Java has two categories: Standard Edition for building desktop or console applications and Enterprise Edition for companies to build state-of-the-art web applications.
+
+
 " Java follows the philosophy of Write Once, Run Anywhere (WORA). "
 
 ## Java and JDK versions
