@@ -214,4 +214,47 @@ a / b // 2
 (double) a / b // 2.5
 ```
 ## Matching between data types
+<br><img src="https://github.com/brendamrdz/week1-course4-java-basico/blob/main/images/cast-datatype.JPG?raw=true" alt="alt text" width="30%" height="auto"><br><br>
 
+## .JAR files
+The JAR files (Java Archive) are Java files with the code compiled from the .class files and compressed with the ZIP format so that later they can be interpreted and executed by the Java Virtual Machine (JVM).
+
+To generate these files we can go to File > Project Structure > Artifacts and select the JAR > From modules with dependencies option. After this we can compile our project from Build > Build Artifacts > Build and we can place our executable files in the out/artifacts/ folder.
+## If statement
+Conditionals are the way computers make decisions, they will evaluate whether the condition for executing a piece of code is met. 
+```bash
+if (condición) {
+  // instrucciones
+}
+```
+The ELSE statement is the opposite of the IF statement: instead of executing a part of the code if the condition is true, it will only do so if the condition is NOT met:
+```bash
+if (isBluetoothEnabled) {
+  fileSended++;
+  System.out.println("Archivo enviado");
+} else {
+  System.out.println("El Bluetooth no está activado");
+}
+```
+## Scope
+- The global variables: They are defined before entering a function or process and that as its name indicates can be called to processes in any place since they were previously declared.
+
+- The local variables: They are those that are defined for a specific process in a specific function and only they are going to be recognized for that function or process, that is to say that if we try to make the call to a local variable in another function that is not the one of origin it will not recognize it as declared.
+
+## Logical Operators and Boolean Expressions
+**Equity operators:**
+- Equality: **==**
+- Inequality: **!=**
+
+
+**Relational Operators:**
+- Less than: **<**
+- Greater than: **>**
+- Less than or equal to: **<=**
+- Greater than or equal to: **>=**
+
+
+**Logical operators:**
+- **&&** : AND (evaluate whether two or more conditions are true).
+- **||** : OR (evaluate if at least one of the conditions is true).
+- **!** : NOT (evaluate if the condition is NOT true).
