@@ -220,28 +220,43 @@ a / b // 2
 The JAR files (Java Archive) are Java files with the code compiled from the .class files and compressed with the ZIP format so that later they can be interpreted and executed by the Java Virtual Machine (JVM).
 
 To generate these files we can go to File > Project Structure > Artifacts and select the JAR > From modules with dependencies option. After this we can compile our project from Build > Build Artifacts > Build and we can place our executable files in the out/artifacts/ folder.
-## If statement
+
+## Conditionals
+### If statement
 Conditionals are the way computers make decisions, they will evaluate whether the condition for executing a piece of code is met. 
 ```bash
-if (condición) {
-  // instrucciones
+if (condition) {
+  // instructions
 }
 ```
 The ELSE statement is the opposite of the IF statement: instead of executing a part of the code if the condition is true, it will only do so if the condition is NOT met:
 ```bash
-if (isBluetoothEnabled) {
-  fileSended++;
-  System.out.println("Archivo enviado");
+if (condition) {
+ // instructions
 } else {
-  System.out.println("El Bluetooth no está activado");
+ // instructions
 }
 ```
-## Scope
+### ELSE IF
+Remember that in addition to IF and ELSE statements, we can also use ELSE IF. We use this one when we want to evaluate some condition different from the IF.
+```bash
+if (condition) {
+ // instructions
+} else if (condition) {
+}
+```
+
+#### Scope
 - The global variables: They are defined before entering a function or process and that as its name indicates can be called to processes in any place since they were previously declared.
 
 - The local variables: They are those that are defined for a specific process in a specific function and only they are going to be recognized for that function or process, that is to say that if we try to make the call to a local variable in another function that is not the one of origin it will not recognize it as declared.
-
-## Logical Operators and Boolean Expressions
+### ternary operators 
+```bash
+Ternary operators are another way to evaluate conditions, as well as IF and ELSE conditionals:
+// Operador Ternario:
+isTurnOnLight = (isTurnOnLight) ? false : true;
+```
+### Logical Operators and Boolean Expressions
 **Equity operators:**
 - Equality: **==**
 - Inequality: **!=**
@@ -258,3 +273,128 @@ if (isBluetoothEnabled) {
 - **&&** : AND (evaluate whether two or more conditions are true).
 - **||** : OR (evaluate if at least one of the conditions is true).
 - **!** : NOT (evaluate if the condition is NOT true).
+
+## Switch
+**Switch to Java 11:**
+```bash
+switch (teacher) {
+  case "Anahi":
+    System.out.println("Java teacher!");
+    break;
+  case "Oscar":
+    System.out.println("React.js teacher!");
+    break;
+  case "JuanDC":
+    System.out.println("Hey kid, what are you doing here?");
+    break;
+  default:
+    System.out.println("A new teacher!");
+    break;
+}
+```
+In a Switch: in this situation break makes the switch flow not continue executing to the next comparison, so that only a single condition is fulfilled.
+
+**Switch from Java 12:**
+```bash
+switch (age) {
+  case 1 -> System.out.println("You are 1 year old!");
+  case 20 -> System.out.println("You are 20 years old!");
+  default -> System.out.println("Your age is neither 1 nor 20");
+}
+```
+
+##  What are the functions for?
+Functions help us to execute code that, depending on the options we send it, will transform and return a certain result. Thanks to functions we can organize, modularize, reuse and avoid repetitions in our code.
+
+All our functions must have a name. Optionally, they can take arguments and return a result. We must also specify the data type of our arguments and the final result of our function.
+For example:
+```bash
+public int sum(int a, int b) {
+  return a + b;
+}
+```
+If our function does NOT return any data type we can use the reserved word void.
+
+To use our functions we only need to assign the result of the function and its parameters to a variable with the same data type as the function:
+```bash
+int c = sum(5, 7);
+```
+## Java Docs 
+Java Docs is a tool used by many other tools and applications because it helps us to document all our code using comments. In addition, it allows us to visualize the documentation in HTML format.
+```bash
+// Single line comments 
+ 
+/* Comment 
+* on multiple 
+* lines */ 
+ 
+/** 
+* Comment for Java Docs 
+* */ ;
+```
+Let's document the convertToDolar function. Remember that this function returns a double number and receives two arguments: quantity (of type double) and currency (of type String):
+```bash
+/**
+ * General description of our function.
+ * 
+ * @param quantity Description of the quanity parameter.
+ * @param currency Description of the currency parameter (MXN or COP).
+ * Description of the value we return in this function.
+ * */
+```
+For the IDE to show the description and documentation of the functions we must enter IntelliJ IDEA > Preferences > Editor > General > Code Completion and enable the Show the documentarion popup option.
+
+## Loops
+### Do while loop
+Loops  help us to execute a part of our code a number of times until some condition is met and we can continue with the execution of our code.
+There are different loops. For example, the do while loop:
+```bash
+do {
+  // instructions
+} while (condition);
+```
+
+### While loop
+The While Loop helps us to execute a part of the code as long as a condition is met. Remember to be very careful and make sure that the while loop condition changes at some point, otherwise, the loop will never stop and you will overload your program:
+
+```bash
+while (isTurnOnLight) {
+  printSOS();
+}
+```
+
+### For loop
+The For Loop also helps us to execute a part of our code as many times as necessary for a condition to be met. In fact, the FOR loop gives us many aids to achieve this result in the easiest possible way:
+```bash
+// Structure:
+for (initialization; condition; increment or decrement;) {
+  // Instructions
+}
+```
+## Arrays
+Arrays are objects in which we can store more than one variable, a list of elements. Arrays are one-dimensional, but if we store arrays inside other arrays we can obtain multidimensional arrays.
+Arrays are defined in code in the following ways:
+```bash
+// 1. Define the variable name and data type.
+// that it will contain, either of the following two
+// options is valid:
+DataType[] variableName;
+DataType variableName[];
+```
+
+```bash
+// 2. Define the size of the array, the amount of elements
+// we can store in the array:
+Datatype[] variableName = new Datatype[capacity];
+```
+
+```bash
+// Two-dimensional array:
+Datatype[][] cities = new String[numberRows][numberColumns];
+Since arrays can store multiple elements, the convention is to write variable names in plural.
+```
+Indexes are simple variables that help us identify positions in an array. These variables always store numbers, they start at 0 and increment from bottom to top and from left to right as we store more elements in our arrays.
+
+To store a value in some position of our array we only have to use the index in the following way:
+
+```bashvariableName[index] = value;```
