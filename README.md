@@ -1,5 +1,6 @@
 # Java SE
 ## Table of Contents
+[What is Java?](#what-is-java?)
 
 ## What is Java?
 Java is a high-level programming language that helps us build applications for different devices and operating systems.
