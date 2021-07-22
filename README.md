@@ -57,7 +57,7 @@ Java is a compiled and interpreted language at the same time.
 ## Declaring variables
 A variable is a memory space (RAM) that contains a numeric, Boolean, text or other slightly more complex data type.
 Variables in Java consist of a unique name and a value that can change during program execution. When declaring variables we must define the type of data we are going to use and a semicolon at the end;
-````bash
+```bash
 public class Variables {
   public static void main(String[] args) {
     // Declare the variable speed of type int (integers)
@@ -86,13 +86,15 @@ A naming convention is a pattern that variable names must follow so that the cod
 - Constant variables are variables whose value will never change, so they must be written in all uppercase and using the _ character.
 
 - We must use Upper Camel Case in the names of classes and files. And Lower Camel Case in the names of variables or methods.
-````bash
+
+```bash
 // Upper Camel Case:
 class ImClass {};
 
 // Lower Camel Case
 int ImNumberInt = 10;
 ```
+
 ## Types of data 
 ### Data types for integers (without decimals):
 
@@ -101,7 +103,7 @@ int ImNumberInt = 10;
 - int: It occupies 4 bytes of memory and its range is -2,147,483,648 to 2,147,483,647. It is very convenient to use, since it is not so small that our numbers do not fit, nor so - big that it wastes a lot of memory. It can store up to 10 digits.
 - long: It occupies 8 bytes of memory and its range is from -9,223,372,372,036,854,775,808 to 9,223,372,036,854,775,807. To differentiate it from a long data type we must end the number with the letter L.
 For example:
-````bash
+```bash
 // Int:
 int n = 1234567890;
 
@@ -113,14 +115,103 @@ long nL = 123456789012345L;
 - float: they occupy 4 bytes of memory and range from 1.40129846432481707e-45 to 3.40282346636638528860e+38. As long, we must place a letter F at the end.
 - double: They occupy 8 bytes of memory and their range is 4.9406564584124654446544e-324d to 1.79769313486231570e+308d.
 For example:
-````bash
+```bash
 // Double:
 double nD = 123.456123456;
 
 // Float
 float nF = 123.456F;
 ```
-### 
-## Conditionals
-## Programming logic
-## Algorithms
+### Char and boolean data types
+- char: It occupies 2 bytes and can only store 1 digit, we must use single quotes instead of double quotes.
+- boolean: They are a logical data type, they only accept true and false values. It also occupies 2 bytes and stores only 1 digit.
+Surely you noticed that we must always write the data type of our variables before defining their name and value. But this changes from Java 10 onwards: we only have to write the reserved word var and Java will define the data type of our variables automatically:
+```bash
+var salary = 1000; // INT
+var pension = salary * 0.03; // DOUBLE
+var totalSalary = salary - pension; // DOUBLE
+```
+## Assignment, Increment and Decrement Operators
+
+### Assignment operators:
+**+=: a += b** is equivalent to **a = a + b.**
+
+**-=: a -= b** is equivalent to **a = a - b.**
+
+*=: a *= b is equivalent to **a = a * b.**
+
+**/=: a /= b** is equivalent to **a = a / b.**
+
+**%=: a %= b** is equivalent to **a = a % b.**
+
+### Increment operators:
+
+**++: i++** is equivalent to **i = i + 1.**
+**--: i--** is equivalent to **i = i - 1.**
+
+We can use these operators prefixed (++i) or postfixed (i++). The difference is in which operation is executed first:
+## Mathematical operations
+Math is a Java class that helps us to execute different mathematical operations:
+Math.PI // 3.141592653589793
+
+Math.E // 2.71828182845459045
+
+
+
+Math.ceil(2.1) // 3.0 (round up)
+
+Math.floar(2.1) // 2.0 (round down)
+
+
+
+Math.pow(2, 3) // 8.0 (number raised to a power)
+
+Math.sqrt(3) // 1.73... (square root)
+
+
+
+Math.max(2, 3) // 3.0 (largest number)
+
+
+
+// Area of a circle (PI * r^2):
+
+Math.PI * Math.pow(r, 2).
+
+
+
+// Area of a sphere (4 * PI * r^2):
+
+4 * Math.PI * Math.pow(r, 2)
+
+
+
+// Volume of a sphere ( (4/3) * PI * r^3):
+
+(4/3) * Math.PI * Math.pow(r, 3).
+
+## Cast
+
+In programming there are situations where we need to change the data type of our variables, this is known as Cast.
+### Estimate:
+```bash
+double monthlyDogs = dogsQuantity / 12.0;
+// monthlyDogs: 2.5 (but it's not possible, we didn't rescue half a dog!)
+
+int estimatedMonthlyDogs = (int) monthlyDogs;
+// estimatedMonthlyDogs: 2
+
+// Remember that rounding does not round, it just removes the decimals:
+Math.sqrt(3) // 1.73205050807575688772
+(int) Math.sqrt(3) // 1
+```
+### Accuracy:
+```bash
+int a = 30;
+int b = 12;
+
+a / b // 2
+(double) a / b // 2.5
+```
+## Matching between data types
+
