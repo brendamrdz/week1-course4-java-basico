@@ -157,11 +157,11 @@ var totalSalary = salary - pension; // DOUBLE
 
 We can use these operators prefixed (++i) or postfixed (i++). The difference is in which operation is executed first:
 ## Mathematical operations
+```bash
 Math is a Java class that helps us to execute different mathematical operations:
 Math.PI // 3.141592653589793
 
 Math.E // 2.71828182845459045
-
 
 
 Math.ceil(2.1) // 3.0 (round up)
@@ -169,15 +169,12 @@ Math.ceil(2.1) // 3.0 (round up)
 Math.floar(2.1) // 2.0 (round down)
 
 
-
 Math.pow(2, 3) // 8.0 (number raised to a power)
 
 Math.sqrt(3) // 1.73... (square root)
 
 
-
 Math.max(2, 3) // 3.0 (largest number)
-
 
 
 // Area of a circle (PI * r^2):
@@ -185,17 +182,15 @@ Math.max(2, 3) // 3.0 (largest number)
 Math.PI * Math.pow(r, 2).
 
 
-
 // Area of a sphere (4 * PI * r^2):
 
 4 * Math.PI * Math.pow(r, 2)
 
 
-
 // Volume of a sphere ( (4/3) * PI * r^3):
 
 (4/3) * Math.PI * Math.pow(r, 3).
-
+```
 ## Cast
 
 In programming there are situations where we need to change the data type of our variables, this is known as Cast.
