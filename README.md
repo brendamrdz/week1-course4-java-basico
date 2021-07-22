@@ -1,8 +1,38 @@
 # Java SE
 ## Table of Contents
-[What is Java?](#what-is-java?)
 
-## What is Java?
+- [What is Java?](#what-is-java)
+- [Java and JDK versions](#java-and-jdk-versions)
+- [The most used Java tools](#the-most-used-java-tools)
+- [Hello world in Java](#hello-world-in-java)
+- [Stages of Java programming](#stages-of-java-programming)
+- [Declaring variables](#declaring-variables)
+- [Java Naming Convention](#java-naming-convention)
+- [Types of data](#types-of-data)
+  - [Data types for integers](#data-types-for-integers)
+  - [Data types for floating](#data-types-for-floating)
+  - [Char and boolean data types](#char-and-boolean-data-types)
+  - [Matching between data types](#matching-between-data-types)
+- [Assignment, Increment and Decrement Operators](#assignment,-increment-and-decrement-operators)
+- [Cast](#cast)
+  - [Estimate](#estimate)
+  - [Accuracy](#accuracy)
+- [JAR files](#jar-files)
+- [Logical Operators and Boolean Expressions](#logical-operators-and-boolean-expressions)
+- [Conditionals](#conditionals)
+  -[If statement](#if-statement)
+  - [ELSE IF](#else-if)
+  - [Ternary operators](#ternary-operators)
+- [switch](#switch)
+- [What are the functions for?](#what-are-the-functions-for?)
+  - [Scope](#scope)
+- [Java Docs](#java-docs)
+- [Loops](#loops)
+  - [Do while loop](#do-while-loop)
+  - [While loop](#while-loop)
+  - [For loop](#for-loop)
+
+## What is Java? 
 Java is a high-level programming language that helps us build applications for different devices and operating systems.
 It was created in 1991 by James Gosling while working at Sun Microsystems, a company that was later acquired by Oracle. This means that Java is very well maintained, but also has some changes that not everyone will agree with.
 
@@ -34,7 +64,7 @@ IDEs are integrated development environments, tools that help us write our code 
 
 The IDE recommended by Oracle is NetBeans, but there are also Eclipse and IntelliJ IDEA, the latter being the one that has gained the most traction thanks to Kotlin. All three tools are free, but IntelliJ IDEA also has a paid version.
 
-## Language syntax
+## Hello world in Java
 Java files use the .java extension. Therefore, to create our first "Hello, world" we can do it from a HelloWorld.java file.
 
 The main method is the entry point of an application in different languages like Java, Kotlin and C++. Without this method our application will not run and will show an error.
@@ -103,8 +133,7 @@ int ImNumberInt = 10;
 ```
 
 ## Types of data 
-### Data types for integers (without decimals):
-
+### Data types for integers
 - byte: Occupies 1 byte of memory and its range is from -128 to 127.
 - short: Occupies 2 bytes of memory and ranges from -32,768 to 32,727.
 - int: It occupies 4 bytes of memory and its range is -2,147,483,648 to 2,147,483,647. It is very convenient to use, since it is not so small that our numbers do not fit, nor so - big that it wastes a lot of memory. It can store up to 10 digits.
@@ -117,7 +146,7 @@ int n = 1234567890;
 // Long:
 long nL = 123456789012345L;
 ```
-### Data types for floating numbers (with decimals):
+### Data types for floating
 
 - float: they occupy 4 bytes of memory and range from 1.40129846432481707e-45 to 3.40282346636638528860e+38. As long, we must place a letter F at the end.
 - double: They occupy 8 bytes of memory and their range is 4.9406564584124654446544e-324d to 1.79769313486231570e+308d.
@@ -138,6 +167,9 @@ var salary = 1000; // INT
 var pension = salary * 0.03; // DOUBLE
 var totalSalary = salary - pension; // DOUBLE
 ```
+#### Matching between data types
+<br><img src="https://github.com/brendamrdz/week1-course4-java-basico/blob/main/images/cast-datatype.JPG?raw=true" alt="alt text" width="30%" height="auto"><br><br>
+
 ## Assignment, Increment and Decrement Operators
 
 ### Assignment operators:
@@ -157,6 +189,7 @@ var totalSalary = salary - pension; // DOUBLE
 **--: i--** is equivalent to **i = i - 1.**
 
 We can use these operators prefixed (++i) or postfixed (i++). The difference is in which operation is executed first:
+
 ## Mathematical operations
 ```bash
 Math is a Java class that helps us to execute different mathematical operations:
@@ -192,6 +225,7 @@ Math.PI * Math.pow(r, 2).
 
 (4/3) * Math.PI * Math.pow(r, 3).
 ```
+
 ## Cast
 
 In programming there are situations where we need to change the data type of our variables, this is known as Cast.
@@ -215,13 +249,30 @@ int b = 12;
 a / b // 2
 (double) a / b // 2.5
 ```
-## Matching between data types
-<br><img src="https://github.com/brendamrdz/week1-course4-java-basico/blob/main/images/cast-datatype.JPG?raw=true" alt="alt text" width="30%" height="auto"><br><br>
+
 
 ## .JAR files
 The JAR files (Java Archive) are Java files with the code compiled from the .class files and compressed with the ZIP format so that later they can be interpreted and executed by the Java Virtual Machine (JVM).
 
 To generate these files we can go to File > Project Structure > Artifacts and select the JAR > From modules with dependencies option. After this we can compile our project from Build > Build Artifacts > Build and we can place our executable files in the out/artifacts/ folder.
+
+### Logical Operators and Boolean Expressions
+**Equity operators:**
+- Equality: **==**
+- Inequality: **!=**
+
+
+**Relational Operators:**
+- Less than: **<**
+- Greater than: **>**
+- Less than or equal to: **<=**
+- Greater than or equal to: **>=**
+
+
+**Logical operators:**
+- **&&** : AND (evaluate whether two or more conditions are true).
+- **||** : OR (evaluate if at least one of the conditions is true).
+- **!** : NOT (evaluate if the condition is NOT true).
 
 ## Conditionals
 ### If statement
@@ -247,34 +298,13 @@ if (condition) {
 } else if (condition) {
 }
 ```
-
-#### Scope
-- The global variables: They are defined before entering a function or process and that as its name indicates can be called to processes in any place since they were previously declared.
-
-- The local variables: They are those that are defined for a specific process in a specific function and only they are going to be recognized for that function or process, that is to say that if we try to make the call to a local variable in another function that is not the one of origin it will not recognize it as declared.
-### ternary operators 
+### Ternary operators 
 ```bash
 Ternary operators are another way to evaluate conditions, as well as IF and ELSE conditionals:
 // Operador Ternario:
 isTurnOnLight = (isTurnOnLight) ? false : true;
 ```
-### Logical Operators and Boolean Expressions
-**Equity operators:**
-- Equality: **==**
-- Inequality: **!=**
 
-
-**Relational Operators:**
-- Less than: **<**
-- Greater than: **>**
-- Less than or equal to: **<=**
-- Greater than or equal to: **>=**
-
-
-**Logical operators:**
-- **&&** : AND (evaluate whether two or more conditions are true).
-- **||** : OR (evaluate if at least one of the conditions is true).
-- **!** : NOT (evaluate if the condition is NOT true).
 
 ## Switch
 **Switch to Java 11:**
@@ -321,6 +351,10 @@ To use our functions we only need to assign the result of the function and its p
 ```bash
 int c = sum(5, 7);
 ```
+### Scope
+- The global variables: They are defined before entering a function or process and that as its name indicates can be called to processes in any place since they were previously declared.
+
+- The local variables: They are those that are defined for a specific process in a specific function and only they are going to be recognized for that function or process, that is to say that if we try to make the call to a local variable in another function that is not the one of origin it will not recognize it as declared.
 ## Java Docs 
 Java Docs is a tool used by many other tools and applications because it helps us to document all our code using comments. In addition, it allows us to visualize the documentation in HTML format.
 ```bash
